@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import './Services.css'
 
 const Services = () => {
     const { user } = useAuth();
@@ -13,13 +14,6 @@ const Services = () => {
 
     return (
         <div className="container mt-5">
-
-
-
-
-            <h4>${user.email}</h4>
-
-
             <h3 className="text-center text-success">OUR SERVICES</h3>
             <div className="row container mt-5">
 
@@ -29,14 +23,14 @@ const Services = () => {
 
                         <div className="col-lg-4">
 
-                            <div className="m-3">
+                            <div className="m-3 service-container">
                                 <img className="img-fluid" src={singleService.image
                                 } alt="" />
                                 <h3>{singleService.name}</h3>
                                 <p>{singleService.description}</p>
                                 <Link to={`/shippping/${singleService._id}`}>
 
-                                    <button className="bg-danger">Go For Shipping</button>
+                                    <button className="regular-btn">Buy Tickit</button>
                                 </Link>
                             </div>
 
