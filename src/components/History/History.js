@@ -15,11 +15,11 @@ const History = () => {
 
                     <div>
                         <div className="mb-1">
-                            <img className="img-fluid" src="https://media.istockphoto.com/photos/defensive-fortress-in-the-desert-dhayah-foryt-picture-id1162144421?k=20&m=1162144421&s=612x612&w=0&h=-HoEQBq-dkUbxPhQkWnUt_MB6ADERQp9b1qcVz2r-8Q=" alt="" />
-                            <small className="d-flex justify-content-center">usf lorem 112AD</small>
+                            <img className="img-fluid" src="https://media.istockphoto.com/photos/wooden-boat-repair-yard-retro-styled-picture-id507400080?b=1&k=20&m=507400080&s=170667a&w=0&h=AbCUwx4L41i4coJVxgNb8Hcy-w6DCefxbpkNZ8fckiU=" alt="" />
+                            <small className="d-flex justify-content-center">Al Maktoum dynasty (1833 to 1893)</small>
                         </div>
                         <div className="mt-1">
-                            <img className="img-fluid" src="https://media.istockphoto.com/photos/defensive-fortress-in-the-desert-dhayah-foryt-picture-id1162144421?k=20&m=1162144421&s=612x612&w=0&h=-HoEQBq-dkUbxPhQkWnUt_MB6ADERQp9b1qcVz2r-8Q=" alt="" />
+                            <img className="img-fluid" src="https://media.istockphoto.com/photos/dubai-a-long-time-ago-retro-style-composition-picture-id504981424?b=1&k=20&m=504981424&s=170667a&w=0&h=SAVl3n9eau1BeKTEEjKOWNhypsZFgBwDeRsl9-xC8xU=" alt="" /><small className="d-flex justify-content-center">The walled city (1800-1832)</small>
                         </div>
                     </div>
                 </div>

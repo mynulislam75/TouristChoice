@@ -15,8 +15,6 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-
-
       <AuthProvider>
       <BrowserRouter>
       <h2 className="text-center m-3 p-3 text-success">TOUR TO DUBAI</h2>

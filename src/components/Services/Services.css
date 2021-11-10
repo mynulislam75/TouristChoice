@@ -1,8 +1,11 @@
 
 .service-container{
-    border: 1px solid aqua;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 10px;
+    border-radius: 5px;
+}
+.service-container:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .regular-btn{
    background-color: rgb(162, 177, 137);

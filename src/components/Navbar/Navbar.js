@@ -23,7 +23,7 @@ const Navbar = () => {
                         <div >
 
                             <div>
-                                <h2> TOURISM</h2>
+                                <h4>DUBAI-TOUR</h4>
                             </div>
 
                         </div>
@@ -48,6 +48,11 @@ const Navbar = () => {
                                     {
                                         user.email && <NavLink className="items p-2" to="/admindashboard">Manage Orders</NavLink>
                                     }
+                                </li>
+                                <li className="items p-2">
+                                   {
+                                       user.email&& <p>Hello,{user.displayName}</p>
+                                   }
                                 </li>
                                 <li className="items p-2">
                                     {

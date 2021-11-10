@@ -14,10 +14,13 @@ const Services = () => {
 
     return (
         <div className="container mt-5">
-            <h3 className="text-center text-success">OUR SERVICES</h3>
-            <div className="row container mt-5">
 
-
+            <div className="text-center">
+            <h2 className="">Our services</h2>
+            <small>Confirm your tickit from our available services right now!</small>
+            </div>
+          
+            <div className="row container mt-3">
                 {
                     services.map(singleService => (
 

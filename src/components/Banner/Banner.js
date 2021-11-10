@@ -10,9 +10,9 @@ const Banner = () => {
                         <div className="row">
                             <div className="col-md-10">
                                 <div className="container">
-                                <h1 className="banner-title">Take care of your Health Now !</h1>
-                                <h3 className="sub-title">Sale up to 30% all products</h3>
-                                <button className="banner-btn">shop now</button>
+                                <h1 className="banner-title">Dubai-Experiential journeys <br /> will make you a storyteller.</h1>
+                                <p className="sub-title">In Dubai, everything is possible! Dubai is writing its own story with the swanky sky high and the numerous entertainment options. </p>
+                                <button className="banner-btn">Explore Now</button>
                                 </div>
                             </div>
                             <div className="col-md-2"></div>

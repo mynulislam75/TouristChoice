@@ -62,12 +62,31 @@ const Shipping = () => {
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
+                
+                        <input {...register("userName")}
+                            defaultValue={user?.displayName}
+                            className="w-75 p-1 m-1"
+                        />
+                        <br />
+              
+                        <input {...register("email")}
+                            defaultValue={user?.email}
+                            className="w-75 p-1 m-1"
+                        />
+                        <br />
+                    
                         <input {...register("name")}
                             defaultValue={services?.name}
                             className="w-75 p-1 m-1"
                         />
                         <br />
-
+                       
+                        <input {...register("address")}
+                            type="comments"
+                            placeholder="Your address"
+                            className="w-75 p-1 m-1"
+                        />
+                        <br />
                         <input {...register("comments")}
                             type="comments"
                             placeholder="Add some comments"

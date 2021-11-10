@@ -18,9 +18,9 @@ const handleGoogleLogin = () => {
         })
 }
     return (
-        <div className="text-center">
+        <div className="text-center container mt-5">
             <h3>Please log in</h3>
-            <button onClick={handleGoogleLogin}>Google Log in</button>
+            <button className="btn btn-success" onClick={handleGoogleLogin}>Google Log in</button>
         </div>
     );
 };
