@@ -14,7 +14,7 @@ const Dashboard = () => {
     }, []);
 
 
-
+    console.log(allOrder)
     // HANDLE DELETE
 
     const handleDelete = id => {
@@ -41,9 +41,9 @@ const Dashboard = () => {
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">User Email</th>
+                            <th scope="col">Service</th>
+                            <th scope="col">Service Id</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,9 +51,10 @@ const Dashboard = () => {
                             allOrder.map(singleOrder => (
                                 <tr>
                                     <th scope="row">*</th>
-                                    <td>{singleOrder.email}</td>
-                                    <td>{singleOrder.comments}</td>
-                                    <td> <button onClick={() => handleDelete(singleOrder._id)}>CANCEL</button></td>
+                                    <td>{singleOrder?.email}</td>
+                                    <td>{singleOrder?.name}</td>
+                                    <td>{singleOrder?._id}</td>
+                                    <td> <button className="btn btn-info" onClick={() => handleDelete(singleOrder._id)}>CANCEL</button></td>
 
                                 </tr>
                             ))

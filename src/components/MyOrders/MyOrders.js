@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './MyOrders.css'
 
 const MyOrders = () => {
 
@@ -27,7 +28,7 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount) {
-                alert('Delete This Item? ')
+                    alert('Delete This Item? ')
                     setControl(!control);
                 }
             });
@@ -38,26 +39,20 @@ const MyOrders = () => {
     return (
         <div>
 
-
-
-
-
-            <div className="col md-5">
-
-                <div className="row container mt-5">
-
-
+            <div className="container">
+                <h3 className="m-5">Your ordered services</h3>
+                <div className="row container p-2">
                     {
                         myOrders.map(oneService => (
 
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-md-2 col-sm-12">
 
-                                <div className="m-3">
+                                <div className="m-4 p-3 order-container">
                                     <img className="img-fluid" src={oneService?.image
                                     } alt="" />
-                                    <h3>{oneService?.name}</h3>
+                                    <h3>Service name: <br /> {oneService?.name}</h3>
                                     <p>{oneService?.description}</p>
-                                    <button onClick={() => handleDelete(oneService?._id)}>CANCEL</button>
+                                    <button className="cancel-btn" onClick={() => handleDelete(oneService?._id)}>CANCEL</button>
                                 </div>
 
                             </div>
@@ -67,33 +62,6 @@ const MyOrders = () => {
                     }
                 </div>
             </div>
-
-
-
-
-
-
-
-            {/* <div className="row">
-                {
-                    myOrders.map(singleOrder => (
-                        <div className="col-lg-4">
-                            <h4>hghjgjhy</h4>
-
-
-
-
-                            <div className="m-3">
-                                <img className="img-fluid" src={singleOrder.image
-                                } alt="" />
-                                <h3>{singleOrder._id}</h3>
-                                <p>{singleOrder.name}</p>
-                                <button onClick={() => handleDelete(singleOrder._id)}>CANCEL</button>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div> */}
 
         </div >
     );
