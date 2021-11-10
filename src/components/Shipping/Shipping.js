@@ -26,7 +26,6 @@ const Shipping = () => {
 
     const onSubmit = data => {
         data.email = email;
-
         // post method
         fetch('http://localhost:5000/confirmOrder', {
             method: "POST",
@@ -41,65 +40,53 @@ const Shipping = () => {
     console.log(user)
     return (
         <div>
+
+            <div className="container mb-4 mt-2">
+                <h3>Hello,{user.displayName}</h3><br />
+            </div>
+
             <div className="row container">
 
-
-
-
                 <div className="col-lg-7">
-
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <img src={user?.photoURL} alt="" />
-                            <h4>Hello,{user?.displayName}!</h4>
-                        </div>
-
-                        <div className="col-lg-6">
-                            <div className="m-3 service-container">
-                                <img className="img-fluid" src={services?.image
-                                } alt="" />
-                                <h3>{services?.name}</h3>
-                                <p>{services?.description}</p>
-                            </div>
-                        </div>
+                    <div className="m-3">
+                        <img className="img-fluid" src={services?.image
+                        } alt="" />
+                        <h2>Service name:{services?.name}</h2>
+                        <h6>Descrption:</h6><br /><small>{services?.description}</small>
                     </div>
-
                 </div>
 
 
-                <div className="col md-5">
-                    <h3>React hook form</h3>
+                <div className="col-md-5 col-lg-5 p-5">
+                    <h3>Wants to order?</h3>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-                        {/* <input defaultValue="test" {...register("example")} /> <br /> */}
-
-
                         <input {...register("name")}
                             defaultValue={services?.name}
+                            className="w-75 p-1 m-1"
                         />
                         <br />
 
                         <input {...register("comments")}
                             type="comments"
-                            placeholder="Comments"
-                        // className="p-2 m-2"
+                            placeholder="Add some comments"
+                            className="w-75 p-1 m-1"
                         />
                         <br />
                         <input {...register("price")}
                             defaultValue={services?.Price}
+                            className="w-75 p-1 m-1"
                         />
                         <br />
                         <input {...register("image")}
                             defaultValue={services?.image}
+                            className="w-75 p-1 m-1"
                         />
                         <br />
 
-
-
-                        {/* errors will return when field validation fails  */}
                         {errors.exampleRequired && <span>This field is required</span>}
-
+                        <small>NB:For making successfull order make sure you hit all input form</small>
                         <input type="submit"
                             value="Order Now"
                             className="btn btn-info" />
