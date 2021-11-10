@@ -1,0 +1,31 @@
+
+.banner-section{
+    background-image: url("https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 100%;
+    height: 100vh;
+    width: 100%;
+
+}
+
+description-text{
+    color:white;
+    padding: 10px;
+}
+.description-text h1{
+    letter-spacing: 5px;
+    color: white;
+    font-weight: 800;
+}
+
+.description-text p{
+    letter-spacing:1px;
+    line-height: 25px;
+    color: white;
+    word-wrap: inherit;
+}
+.btn-regular{
+   border-radius: 8px;
+}

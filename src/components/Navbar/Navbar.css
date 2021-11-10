@@ -1,0 +1,26 @@
+/* .navbar{
+    height: 70px;
+    margin-top: 10px;
+} */
+#navbar-id{
+    padding: 15px;
+    background-color: lightblue;
+}
+.custom-nav{
+    line-height: 40px;
+}
+
+.navbar-img{
+    width: 80px;
+}
+
+.navlink{
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.logout-bt{
+    border: none;
+    background-color: greenyellow;
+
+}
