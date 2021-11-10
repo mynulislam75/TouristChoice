@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 
 
 const Shipping = () => {
-
+    const { user } = useAuth()
     const email = sessionStorage.getItem("email")
     const { servicesId } = useParams();
     const [services, setService] = useState();
@@ -33,13 +35,10 @@ const Shipping = () => {
         })
             .then(res => res.json())
             .then(result => console.log(result));
-
-
-
         console.log(data);
     }
 
-
+    console.log(user)
     return (
         <div>
             <div className="row container">
@@ -47,33 +46,28 @@ const Shipping = () => {
 
 
 
-                {/* <div className="col md-5">
+                <div className="col-lg-7">
 
-                    <div className="row container mt-5">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <img src={user?.photoURL} alt="" />
+                            <h4>Hello,{user?.displayName}!</h4>
+                        </div>
 
-
-                        {
-                            services.map(oneService => (
-
-                                <div className="col-lg-4">
-
-                                    <div className="m-3">
-                                        <img className="img-fluid" src={oneService?.image
-                                        } alt="" />
-                                        <h3>{oneService?.name}</h3>
-                                        <p>{oneService?.description}</p>
-                                    </div>
-
-                                </div>
-
-
-                            ))
-                        }
+                        <div className="col-lg-6">
+                            <div className="m-3 service-container">
+                                <img className="img-fluid" src={services?.image
+                                } alt="" />
+                                <h3>{services?.name}</h3>
+                                <p>{services?.description}</p>
+                            </div>
+                        </div>
                     </div>
-                </div> */}
+
+                </div>
 
 
-                <div className="col md-7">
+                <div className="col md-5">
                     <h3>React hook form</h3>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
