@@ -19,7 +19,7 @@ function App() {
 
       <AuthProvider>
       <BrowserRouter>
-      <h2 className="text-center m-3 p-2 text-success">TOUR TO DUBAI</h2>
+      <h2 className="text-center m-3 p-3 text-success">TOUR TO DUBAI</h2>
       <Navbar></Navbar>
         <Switch>
           <Route exact path="/">
