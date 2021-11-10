@@ -1,5 +1,10 @@
-
-.banner-section{
+.banner {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .banners {
     background-image: url("https://images.pexels.com/photos/5686514/pexels-photo-5686514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-position: center;
     background-size: cover;
@@ -7,25 +12,22 @@
     top: 100%;
     height: 100vh;
     width: 100%;
-
-}
-
-description-text{
-    color:white;
-    padding: 10px;
-}
-.description-text h1{
-    letter-spacing: 5px;
-    color: white;
-    font-weight: 800;
-}
-
-.description-text p{
-    letter-spacing:1px;
-    line-height: 25px;
-    color: white;
-    word-wrap: inherit;
-}
-.btn-regular{
-   border-radius: 8px;
-}
+  }
+  .banner-title {
+    color: #d8d4d4;
+    font-weight: 1000;
+    font-size: 45px;
+  }
+  .sub-title {
+    color: rgb(224, 217, 217);
+    font-size: 38px;
+    margin-top: 10px;
+  }
+  .banner-btn {
+    background-color: rgb(218, 207, 207);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
