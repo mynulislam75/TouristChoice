@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [control, setControl] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://agile-forest-33739.herokuapp.com/myOrders/${email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [control])
@@ -22,7 +22,7 @@ const MyOrders = () => {
     // HANDLE DELETE
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://agile-forest-33739.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

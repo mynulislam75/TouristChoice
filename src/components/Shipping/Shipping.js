@@ -13,7 +13,7 @@ const Shipping = () => {
     const [services, setService] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${servicesId}`)
+        fetch(`https://agile-forest-33739.herokuapp.com/singleProduct/${servicesId}`)
             .then(res => res.json())
             .then(data => setService(data))
 
@@ -27,7 +27,7 @@ const Shipping = () => {
     const onSubmit = data => {
         data.email = email;
         // post method
-        fetch('http://localhost:5000/confirmOrder', {
+        fetch('https://agile-forest-33739.herokuapp.com/confirmOrder', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

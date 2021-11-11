@@ -8,7 +8,7 @@ const Dashboard = () => {
     const email = sessionStorage.getItem("email");
 
     useEffect(() => {
-        fetch("http://localhost:5000/confirmedOrders")
+        fetch("https://agile-forest-33739.herokuapp.com/confirmedOrders")
             .then(res => res.json())
             .then(data => setAllOrder(data))
     }, []);
@@ -18,7 +18,7 @@ const Dashboard = () => {
     // HANDLE DELETE
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`, {
+        fetch(`https://agile-forest-33739.herokuapp.com/deleteOrder/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

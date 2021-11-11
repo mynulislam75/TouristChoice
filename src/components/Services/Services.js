@@ -7,7 +7,7 @@ const Services = () => {
     const { user } = useAuth();
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/allServices")
+        fetch("https://agile-forest-33739.herokuapp.com/allServices")
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
